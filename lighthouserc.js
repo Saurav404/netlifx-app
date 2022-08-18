@@ -3,9 +3,6 @@ module.exports = {
     upload: {
       /* Add configuration here */
       target: "temporary-public-storage",
-    },
-    assert:{
-      preset : "lighthouse:recommended"
     }
   },
 };

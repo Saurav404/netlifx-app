@@ -6,10 +6,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - run: npm install && npm install -g @lhci/cli@0.8.x
-      - run: npm run build
-      - run: lhci autorun
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: Install packages
+      run: npm ci
+    - name: Run ESlint
+      run: npm run ci:lint
+    - name: Run Tests
+      run: npm run ci:test
+    - name: Bundle and Output
+      run: npm run build
+    - name: Lighthouse Benchmarks
+      run: npm run ci:lighthouse

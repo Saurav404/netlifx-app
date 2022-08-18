@@ -18,7 +18,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src --fix",
+    "ci:lint": "eslint ./src",
+    "ci:test": "jest --ci",
+    "ci:lighthouse": "lhci autorun"
   },
   "eslintConfig": {
     "extends": [
