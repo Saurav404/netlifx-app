@@ -21,7 +21,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src --fix",
     "ci:lint": "eslint ./src",
-    "ci:test": "jest --ci",
     "ci:lighthouse": "lhci autorun"
   },
   "eslintConfig": {
@@ -46,7 +45,6 @@
     "@lhci/cli": "^0.9.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.3",
-    "jest" : "^26.0.0"
+    "eslint-plugin-import": "^2.23.3"
   }
 }
