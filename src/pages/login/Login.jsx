@@ -23,7 +23,7 @@ export default function Login() {
           </span>
           <small>
             This page is protected by Google reCAPTCHA to ensure you are not a
-            botyyy. <b>Learn more</b>.
+            botyy. <b>Learn more</b>.
           </small>
         </form>
       </div>
