@@ -18,7 +18,7 @@ const App = () => {
       <Routes>
         <Route
           exact
-          path="/"
+          path="/homepage"
           element={user ? <Home /> : <Navigate to="/register" />}
         />
         <Route
