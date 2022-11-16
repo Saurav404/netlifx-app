@@ -39,7 +39,7 @@ export default function ListItem({ index }) {
             </div>
             <div className="desc">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Praesentium hic rem eveniet error possimus, neque ex doloribus.
+              Praesentium hic rem eveniet error possimus, neque ex doloribusya.
             </div>
             <div className="genre">Action</div>
           </div>

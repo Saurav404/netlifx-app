@@ -1,4 +1,4 @@
-import "./app.scss"
+import "./app.scss";
 import Home from "./pages/home/Home";
 import Watch from "./pages/watch/Watch";
 import Register from "./pages/register/Register";
@@ -10,17 +10,13 @@ import {
   Navigate,
 } from "react-router-dom";
 
-
 const App = () => {
   const user = true;
   return (
     <Router>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={user ? <Home /> : <Navigate to="/register" />}
-        />
+        <Route path="/" element={<Navigate replace to="/homepage" />} />
+        <Route path="homepage" element={<Home />}></Route>
         <Route
           exact
           path="/register"
