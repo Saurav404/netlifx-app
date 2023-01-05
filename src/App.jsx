@@ -3,12 +3,32 @@ import Home from "./pages/home/Home";
 import Watch from "./pages/watch/Watch";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
+import Perfume from "perfume.js";
+import Analytics from "analytics";
+import perfumePlugin from "@analytics/perfumejs";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
+
+console.log("Perfume", Perfume);
+
+const analytics = Analytics({
+  app: "my-app",
+  plugins: [
+    {
+      name: "test-plugin",
+      track: ({ payload }) => {
+        console.log("payload", payload);
+      },
+    },
+    perfumePlugin({
+      perfume: Perfume,
+    }),
+  ],
+});
 
 const App = () => {
   const user = true;
